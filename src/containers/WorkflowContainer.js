@@ -13,7 +13,7 @@ function WorkflowContainer() {
           background: 'white',
           displayValue: false,
           height: 80,
-          width: 1,
+          width: 5,
           margin: 20
         }
       });
