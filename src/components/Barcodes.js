@@ -10,9 +10,9 @@ function Barcodes(props) {
         </div>
 
         <div className="grid-container" id='grid-container'>
-            <div className="option c" id='C' onTouchStart={props.touchStart} onTouchEnd={props.touchEnd}>C</div>
-            <div className="option x" id='X' onTouchStart={props.touchStart} onTouchEnd={props.touchEnd}>X</div>
-            <div className="option sa" id='SA' onTouchStart={props.touchStart} onTouchEnd={props.touchEnd}>SA</div>
+            <div className="option c" id='C' onTouchStart={props.touchStart} onClick={props.touchStart}>C</div>
+            <div className="option x" id='X' onTouchStart={props.touchStart} onClick={props.touchStart}>X</div>
+            <div className="option sa" id='SA' onTouchStart={props.touchStart} onClick={props.touchStart}>SA</div>
         </div> 
     </div>
     )

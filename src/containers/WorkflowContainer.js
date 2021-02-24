@@ -13,7 +13,7 @@ function WorkflowContainer() {
           background: 'white',
           displayValue: false,
           height: 80,
-          width: 5,
+          width: 4,
           margin: 20
         }
       });
@@ -30,20 +30,22 @@ function WorkflowContainer() {
         let box = document.getElementById('bc-box');
         let changeCode = async () => {setCode(letter)};
         changeCode().then(box.style.display = 'flex');
-    }
 
-    function touchEnd(event) {
         if (event.target.id === 'SA') {
-            setCode('L')
             setTimeout( () => {
-                let box = document.getElementById('bc-box');
-                box.style.display = 'none';
-            }, 500)
+                setCode('L');
+                setTimeout( () => {
+                    box.style.display = 'none';
+                }, 500);
+            }, 500);
             return;
         }
-        let box = document.getElementById('bc-box');
-        box.style.display = 'none';
+
+        setTimeout( () => {
+            box.style.display = 'none';
+        }, 500);
     }
+
 
     return (
         <div className="main">
@@ -51,8 +53,7 @@ function WorkflowContainer() {
                 <img ref={inputRef} />
             </div>
         <Barcodes 
-        touchStart={touchStart}
-        touchEnd={touchEnd}/>
+        touchStart={touchStart}/>
         </div>
     );
     
